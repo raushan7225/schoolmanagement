@@ -1,0 +1,189 @@
+/* 
+    NEBOOSASE Student Portal - Central Design System 
+    Colors driven by theme.php (General Settings > Theme Colors)
+*/
+
+:root {
+    --student-primary:   var(--theme-primary-color,   #1b1260);
+    --student-secondary: var(--theme-secondary-color, #ff6a1a);
+    --student-success:   var(--theme-success-color,   #198754);
+    --student-bg-light:  var(--theme-body-bg-color,   #f8f9fa);
+    --student-card-shadow: var(--theme-card-shadow, 0 10px 30px rgba(0,0,0,0.08));
+    --student-border-radius: var(--theme-border-radius, 15px);
+}
+
+/* Dashboard Navigation & Tabs */
+.dashboard-nav {
+    background: #fff;
+    padding: 0 20px;
+}
+.dashboard-nav .nav-link {
+    color: #6c757d;
+    font-weight: 600;
+    padding: 15px 25px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+.dashboard-nav .nav-link.active {
+    color: var(--student-primary);
+    background: transparent;
+    border-bottom-color: var(--student-primary);
+}
+.dashboard-nav .nav-link:hover:not(.active) {
+    color: var(--student-primary);
+    border-bottom-color: rgba(27, 18, 96, 0.2);
+}
+
+/* Tile Components (Overview) */
+.card-tile {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: var(--student-border-radius, 20px);
+    overflow: hidden;
+    background: #fff;
+    height: 100%;
+}
+.card-tile:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--student-card-shadow) !important;
+}
+.icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+.bg-service { background-color: rgba(27, 18, 96, 0.1); color: var(--student-primary); }
+.bg-download { background-color: rgba(255, 106, 26, 0.1); color: var(--student-secondary); }
+
+/* Data Tables */
+.data-table thead { background-color: #f8f9fa; }
+.data-table th {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--student-primary);
+    border-bottom: none;
+    padding: 15px;
+}
+.data-table td { font-size: 14px; vertical-align: middle; padding: 15px; }
+
+/* Form Sections */
+.form-section-title {
+    background: #f1f3f9;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--student-primary);
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: var(--student-primary);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+.upload-box {
+    border: 2px dashed #ddd;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    background: #fafafa;
+    transition: border-color 0.3s ease;
+}
+.upload-box:hover { border-color: var(--student-primary); }
+
+/* Academic Documents (Admit Card / Marksheet) */
+.admit-card-box, .marksheet-card {
+    border: 2px solid var(--student-primary);
+    padding: 40px;
+    background: #fff;
+    position: relative;
+    box-shadow: var(--student-card-shadow);
+}
+.admit-header, .result-header {
+    border-bottom: 2px solid var(--student-primary);
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+}
+.watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-size: 100px;
+    opacity: 0.05;
+    z-index: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    font-weight: 900;
+}
+
+/* Verification Layouts */
+.verification-card {
+    border: 3px dashed var(--student-success);
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+}
+.cert-card {
+    border: 6px double #ffc107;
+    background: #fff;
+    padding: 60px;
+    position: relative;
+    border-radius: 10px;
+}
+
+/* Utility Pills */
+.label-pill {
+    font-size: 11px;
+    font-weight: 700;
+    background: rgba(27, 18, 96, 0.05);
+    color: var(--student-primary);
+    padding: 5px 12px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* Print Overrides */
+@media print {
+    .btn, .dashboard-nav, .d-print-none { display: none !important; }
+    .admit-card-box, .marksheet-card { 
+        border: none; 
+        box-shadow: none; 
+        padding: 0; 
+    }
+    body { background: white !important; }
+}
+
+/* Card Header Colors */
+.card-header h2,
+.card-header h3,
+.card-header h4,
+.card-header p {
+    color: #ffffff !important;
+}
+
+/* Profile Detailed Items */
+.detail-group {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.05);
+    padding: 15px;
+    border-radius: 12px;
+}
+.detail-item {
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+.detail-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.ls-1 { letter-spacing: 1px; }
