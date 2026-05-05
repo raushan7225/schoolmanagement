@@ -5,12 +5,6 @@
 // $user = 'root';
 // $pass = '';
 
-// Live
-$host = 'localhost';
-$db   = 'xdcdkpfd_education';
-$user = 'xdcdkpfd_education';
-$pass = '$BxQY=s6NojUxNn8';
-
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
